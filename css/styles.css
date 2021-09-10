@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+canvas {
+  display: block;
+}
+
+.container {
+  height: inherit;
+  width: -webkit-fill-available;
+}
+
+body {
+  font-family: "Vollkorn", serif;
+  -webkit-scroll-behavior: smooth;
+}
+
+#photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+#photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+hr {
+  margin: 20px 50px;
+  background-color: black;
+  opacity: 0.6;
+}
+
+#info-about-me {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+.card {
+  padding: 10px;
+  width: 400px;
+  background: none !important;
+  text-align: center;
+}
+
+.title-card {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+#sobre-mim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sobre-mim .container {
+  height: 100vh;
+}
+
+#formacao-experiencias,
+#portfolio,
+#contato,
+#dicas {
+  display: flex;
+  background-color: white;
+  padding: 0 20px;
+}
+
+#portfolio,
+#contato {
+  background-color: #f4f4f4;
+}
+
+#portfolio {
+  height: auto;
+}
+
+#items-dicas {
+  align-items: center;
+}
+
+.title-page {
+  margin-top: 40px;
+}
+
+.name-institution {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.office {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.month-year {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.arrow {
+  display: block;
+  margin: auto 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+}
+
+.arrow-experiences {
+  margin: auto 0;
+}
+
+#items-formacao,
+#items-dicas,
+#items-experiencia {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#formacao-experiencias article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#dicas article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+#dicas article img {
+  margin-bottom: 20px;
+}
+
+#items-experiencia {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.description-work {
+  margin-top: 10px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.card-portfolio {
+  box-shadow: 0 13px 12px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  width: 25%;
+  margin: 10px;
+  /* padding: 10px; */
+}
+
+#footer {
+  background: #000;
+  padding: 25px 0 15px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.card-portfolio img {
+  max-width: 100%;
+}
+
+.card-portfolio:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.name-description {
+  padding: 2px 16px;
+}
+
+#cards-portfolio {
+  display: flex;
+  justify-content: space-evenly;
+  /* display: inline-block; */
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/* .nav-link img {
+  width: 30px;
+  height: 30px;
+}
+
+nav {
+  margin-top: -25px;
+} */
+
+/* #forms-contact {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+} */
+
+#info-contact {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#info-contact article {
+  text-align: center;
+  padding: 50px;
+}
+
+/* #info-contact article p  {
+    font-size: 18px;
+    font-weight: bold;
+} */
+
+#sociais {
+  display: flex;
+  justify-content: center;
+}
+
+#sociais img {
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+/* form {
+    width: 60%;
+}
+
+.field {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.label-field {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+  #info-contact {
+      color: white;
+  } */
+
+/* modal */
+
+body {
+  background: #f2f2f2;
+  font-family: Helvetica, sans-serif;
+}
+
+.button {
+  position: fixed;
+  left: 240px;
+  top: 30%;
+}
+
+.button-img {
+  width: 480px;
+  height: 320px;
+  border: 10px solid white;
+  box-shadow: 3px 0 15px 0 gray;
+  background: url(https://pbs.twimg.com/media/BRPz3VECAAErePQ.jpg);
+}
+
+.button-img:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(https://pbs.twimg.com/media/BRPz3VECAAErePQ.jpg);
+}
+
+.modalDialog,
+.modalDialog1,
+.modalDialog2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target,
+.modalDialog1:target,
+.modalDialog2:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-portfolio {
+  position: relative;
+  background: white;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 3px 0 15px 0 black;
+  padding: 20px 0;
+}
+
+.close {
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  right: 0;
+  padding: 5px 8px;
+  margin: 10px;
+  border: 1px solid #fff;
+}
+
+.close:hover {
+  border: 1px solid #f2f2f2;
+}
+
+h3 {
+  padding: 30px 0;
+  text-align: center;
+}
+.text {
+  float: left;
+  width: 50%;
+  padding: 0 30px;
+}
+#slideshow {
+  position: relative;
+}
+
+.slideshow-img {
+  position: absolute;
+  left: 50%;
+  padding: 0 50px;
+}
+
+.mySlides {
+  display: block;
+  width: auto;
+  text-align: center;
+  margin: auto;
+  max-width: 276px;
+}
+
+.vacinaSP {
+  display: block;
+  width: 91%;
+  text-align: center;
+  margin: auto;
+}
+
+.w3-black,
+.w3-hover-black:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+.w3-display-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  margin: 20px;
+}
+
+.w3-display-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(-0%, -50%);
+  margin: 20px;
+}
+
+.w3-btn,
+.w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.w3-black,
+.w3-hover-black:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+p {
+  color: #878787;
+}
+
+/* medias queries */
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+
+  #photo {
+    margin-top: 30%;
+  }
+
+  #info-about-me {
+    display: block;
+  }
+
+  #items-formacao,
+  #items-dicas,
+  #items-experiencia {
+    display: block;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  #items-formacao article,
+  #items-dicas article,
+  #items-experiencia article {
+    margin-bottom: 20px;
+  }
+
+  #formacao-experiencias,
+  #portfolio,
+  #contato {
+    height: auto;
+  }
+
+  #cards-portfolio {
+    display: flex;
+  }
+
+  .card-portfolio {
+    width: 100%;
+  }
+
+  #info-contact {
+    display: block;
+  }
+
+  #info-contact article {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav li a {
+    padding: 8px;
+  } */
+
+  .name-institution {
+    font-size: 15px;
+  }
+
+  #cards-portfolio {
+    margin: 0;
+  }
+
+  #cards-portfolio p {
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 13px 12px 0 rgb(0 0 0 / 20%);
+    margin-bottom: 20px;
+  }
+
+  #dicas article {
+    width: 100%;
+  }
+}
+
+/* particles */
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+/* html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} */
+
+/* ---- stats.js ---- */
+
+/* .count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}*/
+
+/* #stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+} */
+
+/* ---- particles.js container ---- */
+
+canvas {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-top: -40px;
+  background-repeat: no-repeat;
+}
