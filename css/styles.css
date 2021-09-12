@@ -177,6 +177,12 @@ hr {
   width: 25%;
   margin: 10px;
   /* padding: 10px; */
+  cursor: pointer;
+}
+
+.card-portfolio:hover {
+  width: 28%;
+  transition: width 2s;
 }
 
 #footer {
