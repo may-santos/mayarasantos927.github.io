@@ -72,7 +72,7 @@ hr {
 }
 
 #sobre-mim .container {
-  height: 100vh;
+  height: 100%;
 }
 
 #formacao-experiencias,
@@ -196,6 +196,11 @@ hr {
 
 .name-description {
   padding: 2px 16px;
+}
+
+.name-description h4 {
+  text-align: center;
+  padding: 5px;
 }
 
 #cards-portfolio {
