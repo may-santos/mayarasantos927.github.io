@@ -53,6 +53,11 @@ hr {
   padding-bottom: 30px;
 }
 
+#info-about-me address {
+  text-align: center;
+}
+
+
 .card {
   padding: 10px;
   width: 400px;
