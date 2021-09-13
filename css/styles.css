@@ -105,7 +105,7 @@ hr {
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 17px;
+  margin-top: 10px;
 }
 
 .office {
@@ -117,6 +117,7 @@ hr {
 .month-year {
   font-weight: bold;
   margin-top: 10px;
+  color: rgb(135, 135, 135) !important;
 }
 
 .arrow {
@@ -535,6 +536,14 @@ p {
 
   #cards-portfolio p {
     text-align: center;
+  }
+
+  #items-formacao article p {
+    margin: 0!important;
+  }
+
+  #items-formacao article h6 {
+    color: rgb(135, 135, 135);
   }
 
   .card {
