@@ -1,618 +1,792 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/index.scss" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <title>Mayara Santos</title>
+    <title>Mayara Santos - Desenvolvedora Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              purple: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                200: "#ddd6fe",
+                300: "#c4b5fd",
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark col-12">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#nav-principal"
-          aria-controls="nav-principal"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse bg-dark" id="nav-principal">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item ml-4">
-              <a href="#sobre-mim" class="nav-link text-light">Sobre mim</a>
-              <!-- <img src="img/favicon.ico" /> -->
-            </li>
-            <li class="nav-item ml-4">
-              <!-- <a href="#formacao-experiencias" class="nav-link text-light">Formação & Experiências</a> -->
-              <a href="#formacao-experiencias" class="nav-link text-light">
-                Formação e Experiências
-                <!-- <img src="img/experience.png" width="40" height="40" /> -->
-              </a>
-            </li>
-            <li class="nav-item ml-4">
-              <!-- <a href="#portfolio" class="nav-link text-light">Portfólio</a> -->
-              <a href="#portfolio" class="nav-link text-light"
-                >Portfólio
-                <!-- <img
-                  src="img/professional-portfolio.png"
-                  width="40"
-                  height="40"/> -->
-              </a>
-            </li>
-            <li class="nav-item ml-4">
-              <!-- <a href="#portfolio" class="nav-link text-light">Portfólio</a> -->
-              <a href="#dicas" class="nav-link text-light"
-                >Dicas
-                <!-- <img
-                  src="img/professional-portfolio.png"
-                  width="40"
-                  height="40"/> -->
-              </a>
-            </li>
-            <li class="nav-item ml-4">
-              <!-- <a href="#contato" class="nav-link text-light">Contato</a> -->
-              <a href="#contato" class="nav-link text-light">
-                Contato
-                <!-- <img src="img/contact-us.png" width="40" height="40"/> -->
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section id="sobre-mim">
-      <div id="particles-js">
-        <div class="container">
-          <div id="photo">
-            <img src="img//eu.jpg" />
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold"
+            >
+              MS
+            </div>
+            <span class="text-lg font-semibold text-gray-900"
+              >Mayara Santos</span
+            >
           </div>
-          <!-- <div id="particles-js"></div> -->
-          <hr />
-
-          <article id="info-about-me">
-            <address id="informations">
-              <h4 class="title-card">Informações</h4>
-              <p>Nome: Mayara de Lima Santos</p>
-              <p>Idade: 21 anos</p>
-              <p>Localização: Itaquaquecetuba - SP</p>
-            </address>
-
-            <address id="about" class="card">
-              <h4 class="title-card">Faculdade & Trabalho</h4>
-              <p>
-                Formada em Análise e Desenvolvimento de Sistemas, atualmente
-                trabalho como Dev Pleno na empresa Next Page com
-                JavaScript/TypeScript utilizando ReactJS, React Native, NodeJS, AWS, SQL e NoSQL.
-              </p>
-            </address>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="formacao-experiencias">
-      <div class="container">
-        <h3 class="title-page">Formação & Experiências</h3>
-        <hr />
-
-        <div id="items-formacao">
-          <article>
-            <img src="img/school.png" width="130" height="130" />
-            <h5 class="name-institution">E.E VILA ERCÍLIA ALGARVE</h5>
-            <p>Ensino Fundamental/Médio</p>
-            <h6 class="month-year">02/2011 - 12/2016</h6>
-          </article>
-          <!-- <div class="arrow"></div> -->
-
-          <article>
-            <img src="img/course.png" width="130" height="130" />
-            <h5 class="name-institution">ETEC GUAIANAZES</h5>
-            <p>Técnico em Informática</p>
-            <h6 class="month-year">02/2016 - 07/2017</h6>
-          </article>
-          <!-- <div class="arrow"></div> -->
-
-          <article>
-            <img src="img/education.png" width="130" height="130" />
-            <h5 class="name-institution">FATEC - ALTO DO IPIRANGA</h5>
-            <p>Análise e Desenvolvimento de Sistemas</p>
-            <h6 class="month-year">02/2018 - 12/2020</h6>
-          </article>
-        </div>
-
-        <div id="items-experiencia">
-          <article id="item">
-            <img src="img/php.png" width="130" height="130" />
-            <h5 class="name-institution">GT40</h5>
-            <h6 class="office">Assistente de Programação</h6>
-            <p class="description-work">
-              Prestava suporte de programação ao site da empresa utilizando
-              HTML, CSS, JS, JQuery, PHP e PostgreSQL.
-            </p>
-            <p class="month-year">08/2017 - 02/2018</p>
-          </article>
-          <!-- <div class="arrow arrow-experiences"></div> -->
-
-          <article id="item2">
-            <img src="img/support.png" width="130" height="130" />
-            <h5 class="name-institution">SEFAZ</h5>
-            <h6 class="office">Estágio - Suporte Técnico</h6>
-            <p class="description-work">
-              Realizava manutenção, revisão e reparos de todas as máquinas do
-              local, abertura de tickets para outras equipes (Segurança, Rede,
-              Windows).
-            </p>
-            <p class="month-year">02/2019 - 02/2020</p>
-          </article>
-          <!-- <div class="arrow arrow-experiences"></div> -->
-
-          <article id="item2">
-            <img src="img/react.png" width="130" height="130" />
-            <h5 class="name-institution">NEXTPAGE</h5>
-            <h6 class="office">DEV. Pleno</h6>
-            <p class="description-work">
-              Desenvolvimento de aplicações WEB e Mobile utilizando linguagem de
-              programação Javascript (NodeJS para backend) e Frameworks React e
-              React Native. Banco de dados: SQL. Infraestrutura e serviços
-              externos da AWS.
-            </p>
-            <p class="month-year">02/2020 - Atualmente</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <div class="container">
-        <h3 class="title-page">Portfólio</h3>
-        <hr />
-
-        <main id="cards-portfolio">
-          <article class="card-portfolio" onclick="openApp('abeille')">
-            <img src="img/abeille_libras/logo.png" />
-            <div class="name-description">
-              <h4>Abeille Libras</h4>
-              <p>
-                Aplicativo para gerenciar tarefas, o usuário pode cadastrar
-                tarefas e definir alarmes para receber notificação. Para o
-                desenvolvimento foi utilizado AngularJS e Ionic.
-              </p>
-            </div>
-          </article>
-
-          <article class="card-portfolio" onclick="openApp('cat')">
-            <img src="img/adopt_cat/logo.png" />
-            <div class="name-description">
-              <h4>Adopt Cat</h4>
-              <p>
-                Aplicativo desenvolvimento para Mobile(Android) que busca
-                gatinhos para doação de acordo com sua localização. Para o
-                desenvolvimento foi utilizada a linguagem de programação Java e
-                para armazenamento de dados e serviços de autenticação foi
-                utilizado o Firebase.
-              </p>
-            </div>
-          </article>
-
-          <article class="card-portfolio" onclick="openApp('tarefas')">
-            <img src="img/gerenciador_tarefas/logo.png" />
-            <div class="name-description">
-              <h4>Gerenciador de Tarefas</h4>
-              <p>
-                Aplicativo para gerenciar tarefas, o usuário pode cadastrar
-                tarefas e definir alarmes para receber notificação. Para o
-                desenvolvimento foi utilizado AngularJS e Ionic.
-              </p>
-            </div>
-          </article>
-
-          <article class="card-portfolio" onclick="openApp('vacinas')">
-            <img src="img/vacinasp/logo.png" />
-            <div class="name-description">
-              <h4>VacinaSP</h4>
-              <p>
-                Carteira de vacinação digital desenvolvida para WEB e MOBILE
-                (Android). Para o desenvolvimento WEB foi utilizado PHP, HTML,
-                CSS, JS e MYSQL. Para o desenvolvimento MOBILE foi utilizado
-                JAVA.
-              </p>
-            </div>
-          </article>
-
-          <!-- <article class="card-portfolio">
-					<img src="img/eu.jpg" />
-					<div class="name-description">
-						<h3>Cálculo IMC</h3>
-						<p>Aplicativo para gerenciar tarefas, o usuário pode cadastrar tarefas e definir alarmes para receber notificação. Para o desenvolvimento foi utilizado AngularJS e Ionic.</p>
-					</div>
-				</article>
-
-				<article class="card-portfolio">
-					<img src="img/eu.jpg" />
-					<div class="name-description">
-						<h3>Gasolina ou Etanol?</h3>
-						<p>Aplicativo para gerenciar tarefas, o usuário pode cadastrar tarefas e definir alarmes para receber notificação. Para o desenvolvimento foi utilizado AngularJS e Ionic.</p>
-					</div>
-				</article> -->
-        </main>
-      </div>
-    </section>
-
-    <section id="dicas">
-      <div class="container">
-        <h3 class="title-page">Dicas HEHE</h3>
-        <hr />
-
-        <div id="items-dicas">
-          <article id="item">
-            <img src="img/etec.jpg" width="130" height="130" />
-            <p>
-              As Escolas Técnicas Estaduais são instituições de ensinos técnico,
-              médio e técnico integrado ao médio, pertencentes ao Centro
-              Estadual de Educação Tecnológica Paula Souza, autarquia da
-              Secretaria de Desenvolvimento Econômico, Ciência e Tecnologia do
-              estado de São Paulo.
-            </p>
-            <a href="https://www.vestibulinhoetec.com.br/home/" target="_blank"
-              >Clique aqui e veja!</a
-            >
-          </article>
-          
-          <article id="item">
-            <img src="img/fatec.png" width="130" height="100" />
-            <p>
-             As Faculdades de Tecnologia do Estado de São Paulo (FATECs) são instituições de ensino superior públicas brasileiras
-            </p>
-            <a href="https://www.vestibularfatec.com.br/home/" target="_blank"
-              >Clique aqui e veja!</a
-            >
-          </article>
-
-          <article id="item">
-            <img
-              src="img/fundacao-bradesco-logo.png"
-              width="130"
-              height="130"
-            />
-            <p>
-              Diversos cursos sobre Tecnologia (Administrador Banco de Dados,
-              Desenvolvimento Mobile, Desenvolvimento WEB, Redes, Pacotes Office...)
-            </p>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#inicio" class="text-purple-500 font-medium">Início</a>
             <a
-              href="https://www.ev.org.br/areas-de-interesse/tecnologia#"
-              target="_blank"
-              >Clique aqui e veja!</a
+              href="#sobre"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Sobre</a
             >
-          </article>
-          <!-- <div class="arrow"></div> -->
-        </div>
-
-        <div id="items-experiencia">
-          <article id="item2">
-            <img src="img/coursera.svg" width="130" height="130" />
-            <p>
-              O Coursera tem parceria com mais de 200 universidades e empresas
-              líderes para levar aprendizado online flexível, acessível e
-              relevante para o trabalho para indivíduos e organizações em todo o
-              mundo. Oferecemos uma variedade de oportunidades de aprendizagem -
-              desde projetos práticos e cursos até certificados prontos para o
-              trabalho e programas de graduação.
-            </p>
             <a
-              href="https://pt.coursera.org/courses?query=cursos%20gratis"
-              target="_blank"
-              >Clique aqui e veja!</a
+              href="#projetos"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Projetos</a
             >
-          </article>
-
-          <article id="item2">
-            <img src="img/uri.png" width="130" height="130" />
-            <p>
-              O URI Online Judge é um repositório de problemas de programação.
-              Os problemas são separados por tópicos (iniciante, ad-hoc,
-              strings, etc) e por dificuldade, variando de 1 a 10. Você
-              desenvolve a sua solução para o problema. E a plataforma testa a
-              sua solução e informa se ela está correta assim que enviada
-            </p>
             <a
-              href="https://www.urionlinejudge.com.br/judge/pt/"
-              target="_blank"
-              >Clique aqui e veja!</a
+              href="#contato"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Contato</a
             >
-          </article>
+          </nav>
+          <button class="md:hidden text-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section id="contato">
-      <div class="container">
-        <h3 class="title-page">Contato</h3>
-        <hr />
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+              >
+                Olá, eu sou <span class="text-purple-500">Mayara Santos</span>
+              </h1>
+              <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                Desenvolvedora com foco em aplicações WEB e interfaces
+                intuitivas.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#projetos"
+                  class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg text-center font-medium"
+                >
+                  Ver Projetos
+                </a>
+                <a
+                  href="#contato"
+                  class="border border-purple-500 text-purple-500 hover:bg-purple-50 px-8 py-3 rounded-lg text-center font-medium"
+                >
+                  Contato
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center lg:justify-end">
+              <div class="relative">
+                <div
+                  class="w-64 h-64 bg-white rounded-full shadow-2xl flex items-center justify-center"
+                >
+                  <div
+                    class="w-48 h-48 bg-purple-500 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-20 h-20 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <main id="forms-contact">
-          <section id="info-contact">
-            <article>
-              <img src="img/new-email.png" width="60" height="60" />
-              <p>mayarasantos2578@icloud.com</p>
-            </article>
+      <!-- About Section -->
+      <section id="sobre" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Sobre Mim
+            </h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto"></div>
+          </div>
 
-            <article>
-              <img src="img/whatsapp.png" width="60" height="60" />
-              <p>(11) 94579-0465</p>
-            </article>
-          </section>
-          <section id="sociais">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-1 flex justify-center">
+              <div
+                class="w-48 h-48 bg-purple-200 rounded-full flex items-center justify-center text-purple-700 text-4xl font-semibold"
+              >
+                MS
+              </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                  Analista de sistemas
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  Sou desenvolvedora desde os 17 anos, quando iniciei minha
+                  jornada na ETEC com HTML, CSS e JavaScript. Desde então, venho
+                  me aprofundando em diversas tecnologias, como TypeScript,
+                  React e Node.js, sempre com foco em criar soluções eficientes
+                  e alinhadas às necessidades reais dos usuários. Tenho paixão
+                  por aprender e estou em constante atualização, buscando
+                  explorar novas ferramentas e tendências para entregar produtos
+                  cada vez mais completos e inovadores.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                  Atualmente atuo como Analista de Sistemas no Grupo Boticário,
+                  onde sou responsável pelo desenvolvimento e manutenção de
+                  aplicações web que impactam diretamente a experiência do
+                  usuário. Meu trabalho envolve desde a implementação de novas
+                  funcionalidades até a otimização de sistemas já existentes,
+                  sempre com foco em performance, usabilidade e segurança dos
+                  dados.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">HTML/CSS</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">React</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">Node.js</span>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">TypeScript</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">Banco de dados</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span class="text-gray-700">AWS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projetos" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meus Projetos
+            </h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Aqui estão alguns dos projetos que desenvolvi.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 3 -->
+            <div
+              class="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg rounded-lg overflow-hidden bg-white"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="img/smpt.png"
+                  alt="Portfolio Website"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                  Saúde Mental Para Todos
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  Um trabalho voluntário que desenvolvi para pessoas incríveis
+                  que tem como intuito um sistema de conexão ajuda pacientes do
+                  Brasil todo a encontrar um profissional com quem se sintam em
+                  segurança.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Javascript</span
+                  >
+                </div>
+                <div class="flex gap-3">
+                  <a
+                    target="_blank"
+                    href="https://saudementalparatodos.com/"
+                    class="flex-1 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded text-center text-sm font-medium flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Ver projeto
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div
+              class="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg rounded-lg overflow-hidden bg-white"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="img/memora.png"
+                  alt="Portfolio Website"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Memora</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  Memora é uma plataforma criada para casais e amigos guardarem
+                  suas memórias mais especiais em um só lugar. Com ele, é
+                  possível registrar fotos, músicas, textos e criar uma linha do
+                  tempo afetiva, tornando cada momento inesquecível. Ideal para
+                  quem quer celebrar e reviver histórias de forma única e
+                  personalizada.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Firebase</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >TypeScript</span
+                  >
+                </div>
+                <div class="flex gap-3">
+                  <a
+                    target="_blank"
+                    href="https://memoralove.com.br"
+                    class="flex-1 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded text-center text-sm font-medium flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Ver projeto
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 1 -->
+            <div
+              class="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg rounded-lg overflow-hidden bg-white"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="img/vacinasp/logo.png"
+                  alt="E-commerce Platform"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                  VacinaSP
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  Carteira de vacinação digital desenvolvida para Web e Mobile
+                  (Android). Para o desenvolvimento WEB foi utilizado PHP, HTML,
+                  CSS, JS e banco de dados MySql. Para o desenvolvimento MOBILE
+                  foi utilizado Java voltado para Mobile.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >HTML/CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >PHP</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Java</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >MySql</span
+                  >
+                </div>
+                <div class="flex gap-3">
+                  <a
+                    target="_blank"
+                    href="https://www.cps.sp.gov.br/alunos-da-etec-guaianazes-criam-programa-para-gerenciar-vacinas-em-posto-de-saude/"
+                    class="flex-1 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded text-center text-sm font-medium flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Ver projeto
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div
+              class="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg rounded-lg overflow-hidden bg-white"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="img/abeille_libras/logo.png"
+                  alt="Task Management App"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                  Abeille Libras
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  Aplicativo que foi desenvolvido para auxiliar pessoas surdas e
+                  com deficiência auditiva a se comunicarem em Libras (Língua
+                  Brasileira de Sinais) através de reconhecimento de voz e
+                  tradução automática.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Java</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-medium"
+                    >Firebase</span
+                  >
+                </div>
+                <div class="flex gap-3">
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=xMUU8lpPinc"
+                    class="flex-1 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded text-center text-sm font-medium flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Ver projeto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contato" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Entre em Contato
+            </h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600">
+              Vamos conversar sobre seu próximo projeto? Estou sempre aberta a
+              novas oportunidades e colaborações.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                  Informações de Contato
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-purple-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-900">Email</p>
+                      <p class="text-gray-600">mayaralimaasantos@hotmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-purple-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-900">Telefone</p>
+                      <p class="text-gray-600">+55 (11) 94579-0465</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-purple-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-900">Localização</p>
+                      <p class="text-gray-600">São Paulo, SP - Brasil</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h4 class="font-semibold text-gray-900 mb-3">
+                  Disponibilidade
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Atualmente disponível para novos projetos freelance em
+                  determinados dias da semana devido o meu trabalho fixo.
+                </p>
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-green-700"
+                    >Disponível para projetos</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white shadow-lg rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Envie uma Mensagem
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Preencha o formulário abaixo e entrarei em contato o mais breve
+                possível.
+              </p>
+              <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Nome</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Seu nome completo"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      placeholder="seu@email.com"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Assunto</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Assunto da mensagem"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    placeholder="Descreva seu projeto ou dúvida..."
+                    rows="5"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-md font-medium"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <div
+              class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold"
+            >
+              MS
+            </div>
+            <span class="text-lg font-semibold">Mayara Santos</span>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://github.com/may-santos"
+              class="text-gray-300 hover:text-white"
+              target="_blank"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <!-- <a href="#" class="text-gray-300 hover:text-white">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a> -->
+            <!-- <a href="#" class="text-gray-300 hover:text-white">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                />
+              </svg>
+            </a> -->
             <a
               href="https://www.linkedin.com/in/mayara-santos-64b2b91b8/"
               target="_blank"
+              class="text-gray-300 hover:text-white"
             >
-              <img src="img/linkedin.png" />
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </a>
-            <a href="https://www.instagram.com/maysantoslm/" target="_blank">
-              <img src="img/instagram.png" />
-            </a>
-            <a href="http://github.com/mayarasantos927/" target="_blank">
-              <img src="img/github.png" />
-            </a>
-          </section>
-        </main>
-
-        <!-- <main id="forms-contact">
-				<form>
-					<p class="label-field">
-						<label for="name-user">Digite seu nome:</label>
-						<input type="text" class="field" id="name-user" />
-					</p>
-					<p class="label-field">
-						<label for="email-user">Digite seu email:</label>
-						<input type="text" class="field" id="email-user" />
-					</p>
-					<p class="label-field">
-						<label for="message">Digite sua mensagem:</label>
-						<textarea id="message"></textarea>
-					</p>
-				</form>
-				<article id="info-contact">
-					<p>Whatsapp: (11) 94579-0465</p>
-					<p>Email: mayaralimaasantos@hotmail.com</p>
-				</article>
-			</main> -->
-      </div>
-    </section>
-
-    <footer id="footer">
-      <!-- rodapé -->
-      <div class="container">
-        <p class="text-white text-center">
-          Copyright © 2021 - Todos os direitos reservados
-        </p>
+          </div>
+        </div>
+        <div
+          class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400"
+        >
+          &copy; 2025 Mayara Santos. Todos os direitos reservados.
+        </div>
       </div>
     </footer>
 
-    <!-- modais -->
-
-    <div id="adoptCat" class="modalDialog1">
-      <div class="modal-portfolio">
-        <a href="#portfolio" title="Close" class="close">X</a>
-        <h3 class="title-modal">Adopt Cat</h3>
-        <!-- <div class="text">
-			<p>Puppy kitty ipsum dolor sit good dog teeth toys bird food play dead wagging smooshy parrot collar running litter box finch. Stay collar kibble toy kibble critters walk tabby barky tabby small animals.</p>
-			<p>Critters tabby finch wagging teeth play chew turtle ferret critters collar sit Scooby snacks scratcher twine run fast aquatic yawn Scooby snacks.</p>
-		  </div> -->
-        <div class="w3-content w3-display-container">
-          <img
-            class="mySlides mySlidesAdoptCat"
-            src="img/adopt_cat/Slide1.png"
-          />
-          <img
-            class="mySlides mySlidesAdoptCat"
-            src="img/adopt_cat/Slide2.png"
-          />
-          <img
-            class="mySlides mySlidesAdoptCat"
-            src="img/adopt_cat/Slide4.png"
-          />
-          <img
-            class="mySlides mySlidesAdoptCat"
-            src="img/adopt_cat/Slide5.png"
-          />
-          <img
-            class="mySlides mySlidesAdoptCat"
-            src="img/adopt_cat/Slide6.png"
-          />
-
-          <button
-            class="w3-button w3-black w3-display-left"
-            onclick="plusDivs(-1, 'mySlidesAdoptCat')"
-          >
-            &#10094;
-          </button>
-          <button
-            class="w3-button w3-black w3-display-right"
-            onclick="plusDivs(1, 'mySlidesAdoptCat')"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="gerenciador" class="modalDialog">
-      <div class="modal-portfolio">
-        <a href="#portfolio" title="Close" class="close">X</a>
-        <h3 id="title-modal">Gerenciador de Tarefas</h3>
-
-        <div class="w3-content w3-display-container">
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide1.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide2.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide3.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide4.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide5.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide6.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide7.png"
-          />
-          <img
-            class="mySlides mySlidesGerenciador"
-            src="img/gerenciador_tarefas/Slide8.png"
-          />
-
-          <button
-            class="w3-button w3-black w3-display-left"
-            onclick="plusDivs(-1, 'mySlidesGerenciador')"
-          >
-            &#10094;
-          </button>
-          <button
-            class="w3-button w3-black w3-display-right"
-            onclick="plusDivs(1, 'mySlidesGerenciador')"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="vacinaSP" class="modalDialog2">
-      <div class="modal-portfolio">
-        <a href="#portfolio" title="Close" class="close">X</a>
-        <h3 id="title-modal">VacinaSP</h3>
-        <!-- <div class="text">
-			<p>Puppy kitty ipsum dolor sit good dog teeth toys bird food play dead wagging smooshy parrot collar running litter box finch. Stay collar kibble toy kibble critters walk tabby barky tabby small animals.</p>
-			<p>Critters tabby finch wagging teeth play chew turtle ferret critters collar sit Scooby snacks scratcher twine run fast aquatic yawn Scooby snacks.</p>
-		  </div> -->
-        <div class="w3-content w3-display-container">
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/1.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/2.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/3.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/4.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/5.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/6.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/7.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/8.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/9.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/10.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/11.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/12.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/13.png" />
-          <img class="vacinaSP mySlidesVacinaSP" src="img/vacinasp/14.png" />
-
-          <button
-            class="w3-button w3-black w3-display-left"
-            onclick="plusDivs(-1, 'mySlidesVacinaSP')"
-          >
-            &#10094;
-          </button>
-          <button
-            class="w3-button w3-black w3-display-right"
-            onclick="plusDivs(1, 'mySlidesVacinaSP')"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Simple JavaScript for smooth scrolling -->
     <script>
-      function openApp(app) {
-        console.log(app);
-        if (app === "abeille")
-          window.open(
-            "https://play.google.com/store/apps/details?id=com.dev.abeillelibras&hl=pt_BR&gl=US"
-          );
-        else if (app === "tarefas") window.location.href = "#gerenciador";
-        else if (app === "cat") window.location.href = "#adoptCat";
-        else window.location.href = "#vacinaSP";
-        // switch (app) {
-        // 	case 'abeille':
-        // 		window.open("https://play.google.com/store/apps/details?id=com.dev.abeillelibras&hl=pt_BR&gl=US");
-        // 	case 'tarefas':
-        // 		window.location.href = "#gerenciador";
-        // 	case 'cat':
-        // 		window.location.href = "#adoptCat";
-        // 	default:
-        // 		window.location.href = "#vacinaSP";
-        // }
-      }
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
     </script>
-
-    <!-- scripts -->
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
-
-    <!-- stats.js -->
-    <script src="js/lib/stats.js"></script>
-    <script>
-      var count_particles, stats, update;
-      stats = new Stats();
-      stats.setMode(0);
-      stats.domElement.style.position = "absolute";
-      stats.domElement.style.left = "0px";
-      stats.domElement.style.top = "0px";
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector(".js-count-particles");
-      update = function () {
-        stats.begin();
-        stats.end();
-        if (
-          window.pJSDom[0].pJS.particles &&
-          window.pJSDom[0].pJS.particles.array
-        ) {
-          count_particles.innerText =
-            window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
-    </script>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/javascript.js"></script>
   </body>
 </html>
